@@ -10,14 +10,10 @@ class AppLayout extends Component {
 
   renderChildren() {
       const childrenWithProps = React.Children.map(this.props.children,
-       (child) => React.cloneElement(child, {
-         notify: this.showNotification
-       })
+       (child) => React.cloneElement(child)
       )
-
       return childrenWithProps
     }
-
 
     render() {
       return (
