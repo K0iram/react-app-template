@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 import './style.css'
 
@@ -20,17 +21,17 @@ class Nav extends Component {
       <nav>
         <div className="navWide">
           <div className="wideDiv">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <NavLink to="/home" className="nav-link" activeClassName="active"><p>Home</p></NavLink>
+            <NavLink to="/about" className="nav-link" activeClassName="active"><p>About</p></NavLink>
+            <NavLink to="/contact" className="nav-link" activeClassName="active"><p>Contact</p></NavLink>
           </div>
         </div>
         <div className="navNarrow">
           <i className="fa fa-bars fa-2x" onClick={this.burgerToggle}></i>
           <div className="narrowLinks">
-            <a href="#" onClick={this.burgerToggle}>Link 1</a>
-            <a href="#" onClick={this.burgerToggle}>Link 2</a>
-            <a href="#" onClick={this.burgerToggle}>Link 3</a>
+            <NavLink to="/home" onClick={this.burgerToggle} className="nav-link" activeClassName="active"><p>Home</p></NavLink>
+            <NavLink to="/about" onClick={this.burgerToggle} className="nav-link" activeClassName="active"><p>About</p></NavLink>
+            <NavLink to="/contact" onClick={this.burgerToggle} className="nav-link" activeClassName="active"><p>Contact</p></NavLink>
           </div>
         </div>
       </nav>
