@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 // import our main App component
-import App from '../../src/layout/main'
+import AppLayout from '../../src/layout/main'
 const path = require("path")
 const fs = require("fs")
 export default (req, res, next) => {
@@ -13,7 +13,7 @@ export default (req, res, next) => {
         return res.status(404).end()
       }
       // render the app as a string
-      const html = ReactDOMServer.renderToString(<App />)
+      const html = ReactDOMServer.renderToString(<AppLayout />)
       // inject the rendered app into our html and send it
       return res.send(
         htmlData.replace(

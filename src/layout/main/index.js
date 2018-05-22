@@ -23,8 +23,8 @@ class AppLayout extends Component {
             { this.renderChildren() }
           </div>
         </div>
-      );
+      )
     }
   }
 
-export default AppLayout;
+export default AppLayout
