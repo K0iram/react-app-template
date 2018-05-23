@@ -1,7 +1,9 @@
 import React from 'react';
-import Router from 'react-router-dom/HashRouter'
-import Route from 'react-router-dom/Route'
-import Switch from 'react-router-dom/Switch'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom'
 
 import AppLayout from './layout/main'
 import Home from './components/Home'
